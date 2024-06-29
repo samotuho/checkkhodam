@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cek Khodam Gratis</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h2>Cek Khodam kamu dengan gratis..!</h2>
+      </div>
+      <div class="formInput">
+        <input type="text" id="inputName" placeholder="Masukkan nama kamu" />
+      </div>
+      <div class="btn">
+        <button onclick="khodam()">Cek Sekarang</button>
+      </div>
+    </div>
+
+    <!-- Struktur Modal -->
+    <div id="khodamModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Khodam kamu adalah</h3>
+        <p id="namaKhodam"></p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
