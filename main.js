@@ -8,9 +8,19 @@ function khodam() {
 
   let storedData = JSON.parse(localStorage.getItem("khodamData")) || {};
 
+  var modal = document.getElementById("khodamModal");
+  var namaKhodamElement = document.getElementById("namaKhodam");
+
   if (storedData[inputName]) {
     // Jika input sudah ada di local storage, gunakan hasil yang sama
-    document.getElementById("namaKhodam").innerHTML = storedData[inputName];
+    namaKhodamElement.innerHTML = "Memuat...";
+    modal.style.display = "flex";
+
+    // Tambahkan penundaan sebelum menampilkan hasil
+    const delay = Math.floor(Math.random() * 3000) + 2000; // Antara 2000ms dan 5000ms
+    setTimeout(() => {
+      namaKhodamElement.innerHTML = storedData[inputName];
+    }, delay);
   } else {
     // Jika input belum ada di local storage, buat hasil baru
     const kumpulanJawaban = [
@@ -53,15 +63,20 @@ function khodam() {
     const jawabanAcak = Math.floor(Math.random() * kumpulanJawaban.length);
     const hasilAcak = kumpulanJawaban[jawabanAcak];
 
-    document.getElementById("namaKhodam").innerHTML = hasilAcak;
-
     // Simpan input dan hasil ke local storage
     storedData[inputName] = hasilAcak;
     localStorage.setItem("khodamData", JSON.stringify(storedData));
-  }
 
-  var modal = document.getElementById("khodamModal");
-  modal.style.display = "flex";
+    // Tampilkan pesan loading di dalam modal
+    namaKhodamElement.innerHTML = "Loading...";
+    modal.style.display = "flex";
+
+    // Tambahkan penundaan sebelum menampilkan hasil
+    const delay = Math.floor(Math.random() * 500);
+    setTimeout(() => {
+      namaKhodamElement.innerHTML = hasilAcak;
+    }, delay);
+  }
 }
 
 // Ambil elemen modal
