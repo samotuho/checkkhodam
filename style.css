@@ -79,15 +79,7 @@ button:hover {
   background-color: #cccc00;
   transition: 0.5s;
 }
-footer{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  position: absolute;
-  margin-bottom:0px;
-}
+
 /* Gaya Modal */
 .modal {
   display: none;
