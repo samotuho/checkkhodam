@@ -79,7 +79,7 @@ button:hover {
   background-color: #cccc00;
   transition: 0.5s;
 }
-.labelFooter{
+footer{
   width: 100%;
   height: auto;
   display: flex;
