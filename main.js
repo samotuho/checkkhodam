@@ -52,12 +52,6 @@ function khodam() {
       "Siluman unyu",
       "Demit heboh",
       "Tuyul nge-vlog",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
     ];
 
     const jawabanAcak = Math.floor(Math.random() * kumpulanJawaban.length);
